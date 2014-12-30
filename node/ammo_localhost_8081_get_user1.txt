@@ -1,0 +1,8 @@
+140
+GET /get/user1 HTTP/1.1
+User-Agent: YandexTank/1.1.1
+Host: localhost:8081
+Accept-Encoding: gzip, deflate
+Cookie: 
+Connection: Close
+
