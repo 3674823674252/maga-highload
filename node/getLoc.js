@@ -1,5 +1,6 @@
 module.exports = function (credis, user, res) {
   if (!credis) {
+    console.log('No redis, exiting..');
     return res.cantComplete();
   }
 

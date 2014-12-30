@@ -1,39 +1,27 @@
-72 put1
-POST /loc/put/ HTTP/1.0
-Host: 127.0.0.1
+140
+GET /loc/get/user1 HTTP/1.1
+User-Agent: YandexTank/1.1.1
+Host: localhost:8081
+Accept-Encoding: gzip, deflate
+Cookie: 
+Connection: Close
 
-A
-72 put2
-POST /loc/put/ HTTP/1.0
-Host: 127.0.0.1
+358
+PUT /loc/put/ HTTP/1.1
+User-Agent: YandexTank/1.1.1
+Host: localhost:8081
+Accept-Encoding: gzip, deflate
+Cookie: 
+Connection: Close
 
-A
-72 put3
-POST /loc/put/ HTTP/1.0
-Host: 127.0.0.1
+{ "user": "test-user", "lat": 1, "lon": 2 }
 
-A
-20 del1
-POST /loc/del/ HTTP/1.0
-Host: 127.0.0.1
+5000
+DELETE /loc/del/ HTTP/1.1
+User-Agent: YandexTank/1.1.1
+Host: localhost:8081
+Accept-Encoding: gzip, deflate
+Cookie: 
+Connection: Close
 
-A
-20 del2
-POST /loc/del/ HTTP/1.0
-Host: 127.0.0.1
-
-A
-20 del3
-POST /loc/del/ HTTP/1.0
-Host: 127.0.0.1
-
-A
-20 get1
-GET /loc/get/user1/ HTTP/1.0
-Host: 127.0.0.1
-20 get2
-GET /loc/get/user2/ HTTP/1.0
-Host: 127.0.0.1
-20 get3
-GET /loc/get/user3/ HTTP/1.0
-Host: 127.0.0.1
+{ "user": "test-user" }
