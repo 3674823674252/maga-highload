@@ -91,14 +91,14 @@ var DEL_REGEX = /\/loc\/del\/?/gmi;
 var GET_REGEX = /\/loc\/get\/([^\/]+)\/?/gmi;
 
 function handle(url, method, res, body) {
-  if (url.match(PUT_REGEX) && method == 'PUT') {
+  if (url.match(PUT_REGEX) && method == 'POST') {
     console.log('LOC: attempting to process PUT');
 
     try {
       body = JSON.parse(body);
       return putLoc(credis, body, res);
     } catch (e) {
-      console.log('Error while parsing req.json', e);
+      console.log('Error while parsing req.json', e, body);
       return res.wrongParams();
     }
 
@@ -109,17 +109,19 @@ function handle(url, method, res, body) {
     return getLoc(credis, new RegExp(GET_REGEX).exec(url)[1], res);
   }
 
-  if (url.match(DEL_REGEX) && method == 'DELETE') {
+  if (url.match(DEL_REGEX) && method == 'POST') {
     console.log('LOC: attempting to process DELETE');
 
     try {
       body = JSON.parse(body);
       return delLoc(credis, body.user, res);
     } catch (e) {
-      console.log('Error while parsing req.json', e);
+      console.log('Error while parsing req.json', e, body);
       return res.wrongParams();
     }
   }
+
+  console.log('Sending 404..');
 
   return res.fourOhFour();
 }

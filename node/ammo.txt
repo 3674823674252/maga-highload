@@ -1,27 +1,10 @@
-140
+53 get
 GET /loc/get/user1 HTTP/1.1
-User-Agent: YandexTank/1.1.1
 Host: localhost:8081
-Accept-Encoding: gzip, deflate
-Cookie: 
-Connection: Close
 
-358
-PUT /loc/put/ HTTP/1.1
-User-Agent: YandexTank/1.1.1
+111 put
+POST /loc/put HTTP/1.1
 Host: localhost:8081
-Accept-Encoding: gzip, deflate
-Cookie: 
-Connection: Close
+klfdkdlfdf
 
-{ "user": "test-user", "lat": 1, "lon": 2 }
-
-5000
-DELETE /loc/del/ HTTP/1.1
-User-Agent: YandexTank/1.1.1
-Host: localhost:8081
-Accept-Encoding: gzip, deflate
-Cookie: 
-Connection: Close
-
-{ "user": "test-user" }
+{ \"user\": \"test-user\", \"lat\": 1, \"lon\": 2 }
