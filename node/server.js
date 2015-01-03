@@ -74,6 +74,7 @@ credis = redis.createClient(rport, rhost);
 var rauth = process.env.REDIS_AUTH;
 
 if (rauth) {
+  console.log('Authenticating with REDIS_AUTH..');
   credis.auth(rauth, function (e) {
     if (e) {
       console.log('Wrong auth for redis! Exiting..');
@@ -92,7 +93,7 @@ var GET_REGEX = /\/loc\/get\/([^\/]+)\/?/gmi;
 
 function handle(url, method, res, body) {
   if (url.match(PUT_REGEX) && method == 'POST') {
-    console.log('LOC: attempting to process PUT');
+    console.log('LOC: attempting to process PUT with body: [', body, ']');
 
     try {
       body = JSON.parse(body);
