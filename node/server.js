@@ -25,7 +25,7 @@ var server = http.createServer(function (req, res) {
     handle(url, method, res, body);
   });
 
-  console.log('Serving', url, 'for', method);
+  // console.log('Serving', url, 'for', method);
 
   res.cantComplete = function () {
     this.status = 500;
@@ -74,14 +74,14 @@ credis = redis.createClient(rport, rhost);
 var rauth = process.env.REDIS_AUTH;
 
 if (rauth) {
-  console.log('Authenticating with REDIS_AUTH..');
+  // console.log('Authenticating with REDIS_AUTH..');
   credis.auth(rauth, function (e) {
     if (e) {
-      console.log('Wrong auth for redis! Exiting..');
+      // console.log('Wrong auth for redis! Exiting..');
       return;
     }
 
-    console.log('Authenticated with redis');
+    // console.log('Authenticated with redis');
 
     server.listen(3000);
   });
@@ -93,36 +93,36 @@ var GET_REGEX = /\/loc\/get\/([^\/]+)\/?/gmi;
 
 function handle(url, method, res, body) {
   if (url.match(PUT_REGEX) && method == 'POST') {
-    console.log('LOC: attempting to process PUT with body: [', body, ']');
+    // console.log('LOC: attempting to process PUT with body: [', body, ']');
 
     try {
       body = JSON.parse(body);
       return putLoc(credis, body, res);
     } catch (e) {
-      console.log('Error while parsing req.json', e, body);
+      // console.log('Error while parsing req.json', e, body);
       return res.wrongParams();
     }
 
   }
 
   if (url.match(GET_REGEX) && method == 'GET') {
-    console.log('LOC: attempting to process GET');
+    // console.log('LOC: attempting to process GET');
     return getLoc(credis, new RegExp(GET_REGEX).exec(url)[1], res);
   }
 
   if (url.match(DEL_REGEX) && method == 'POST') {
-    console.log('LOC: attempting to process DELETE');
+    // console.log('LOC: attempting to process DELETE');
 
     try {
       body = JSON.parse(body);
       return delLoc(credis, body.user, res);
     } catch (e) {
-      console.log('Error while parsing req.json', e, body);
+      // console.log('Error while parsing req.json', e, body);
       return res.wrongParams();
     }
   }
 
-  console.log('Sending 404..');
+  // console.log('Sending 404..');
 
   return res.fourOhFour();
 }

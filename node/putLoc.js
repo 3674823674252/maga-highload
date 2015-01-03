@@ -1,6 +1,6 @@
 module.exports = function (credis, body, res) {
   if (!credis) {
-    console.log('No redis, exiting..');
+    // console.log('No redis, exiting..');
     return res.cantComplete();
   }
 
@@ -11,7 +11,7 @@ module.exports = function (credis, body, res) {
 
   credis.set(body.user, JSON.stringify(data), function (e) {
     if (e) {
-      console.log('Error while PUTting:', e);
+      // console.log('Error while PUTting:', e);
       return res.cantComplete();
     }
 
