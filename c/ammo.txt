@@ -1,0 +1,11 @@
+53 get
+GET /loc/get/user1 HTTP/1.1
+Host: localhost:8081
+
+114 put
+POST /loc/put HTTP/1.1
+Host: localhost:8081
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+

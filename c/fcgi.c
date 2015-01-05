@@ -40,7 +40,7 @@ void do_200(FCGX_Request* request) {
   FCGX_Finish_r(request); 
 }
 
-void do_put(char* user, char* lat, char* lon, FCGX_Request* request, REDIS* redis, FILE* fp) {
+void do_put(char* user, char* lat, char* lon, FCGX_Request* request, REDIS* redis) {
   char buf[BUF_CAP];
 
   if (!*redis) {
@@ -54,30 +54,15 @@ void do_put(char* user, char* lat, char* lon, FCGX_Request* request, REDIS* redi
   do_200(request);
 }
 
-void do_del(char* user, FCGX_Request* request, REDIS* redis, FILE* fp) {
-  if (!*redis) {
-    do_500(request);
-    return;
-  }
-
+void do_del(char* user, FCGX_Request* request, REDIS* redis) {
   credis_del(*redis, user);
   do_200(request);
 }
 
-void do_get(char* user, FCGX_Request* request, REDIS* redis, FILE* fp) {
+void do_get(char* user, FCGX_Request* request, REDIS* redis) {
   char* coords;
 
-  if (!*redis) {
-    do_500(request);
-    return;
-  }
-
   credis_get(*redis, user, &coords);
-
-  if (!coords) {
-    do_404(request);
-    return;
-  }
 
   FCGX_PutS("Status: 200\r\n", request->out);
   FCGX_PutS("\r\n", request->out);
@@ -85,7 +70,7 @@ void do_get(char* user, FCGX_Request* request, REDIS* redis, FILE* fp) {
   FCGX_Finish_r(request); 
 }
 
-char* extract_user_from_uri(char* uri, FILE* fp) {
+char* extract_user_from_uri(char* uri) {
   char* uri_c;
   char* token;
 
@@ -112,7 +97,7 @@ char* extract_user_from_uri(char* uri, FILE* fp) {
   return token;
 }
 
-int is_putdel(char* method, char* uri, char* lasttoken, FILE* fp) {
+int is_putdel(char* method, char* uri, char* lasttoken) {
   char* uri_c;
   char* token;
 
@@ -137,27 +122,27 @@ int is_putdel(char* method, char* uri, char* lasttoken, FILE* fp) {
   return 1;
 }
 
-int is_get(char* method, char* uri, FILE* fp) {
+int is_get(char* method, char* uri) {
   if (strcmp (method, "GET") != 0) {
     return 0;
   }
 
-  if (!extract_user_from_uri(uri, fp)) {
+  if (!extract_user_from_uri(uri)) {
     return 0;
   }
 
   return 1;
 }
 
-int is_put(char* method, char* uri, FILE* fp) {
-  return is_putdel(method, uri, "put", fp);
+int is_put(char* method, char* uri) {
+  return is_putdel(method, uri, "put");
 }
 
-int is_del(char* method, char* uri, FILE* fp) {
-  return is_putdel(method, uri, "del", fp);
+int is_del(char* method, char* uri) {
+  return is_putdel(method, uri, "del");
 }
 
-struct json_token* extract_body(FCGX_Stream* in, FILE* fp) {
+struct json_token* extract_body(FCGX_Stream* in) {
   char buf[BUF_CAP];
   struct json_token* parsed_json;
 
@@ -234,19 +219,19 @@ void* start_thread(void *arg) {
     method = FCGX_GetParam("REQUEST_METHOD", request.envp);
     uri = FCGX_GetParam("REQUEST_URI", request.envp);
 
-    if (is_get(method, uri, log)) {
-      user_get = extract_user_from_uri(uri, log);
-      do_get(user, &request, &redis, log);
-    } else if (is_put(method, uri, log)) {
-      body = extract_body(request.in, log);
+    if (is_get(method, uri)) {
+      user_get = extract_user_from_uri(uri);
+      do_get(user, &request, &redis);
+    } else if (is_put(method, uri)) {
+      body = extract_body(request.in);
 
       extract_user_from_body(body, user);
       extract_lat_from_body(body, lat);
       extract_lon_from_body(body, lon);
-      do_put(user, lat, lon, &request, &redis, log);
-    } else if (is_del(method, uri, log)) {
-      body = extract_body(request.in, log);
-      do_del(user, &request, &redis, log);
+      do_put(user, lat, lon, &request, &redis);
+    } else if (is_del(method, uri)) {
+      body = extract_body(request.in);
+      do_del(user, &request, &redis);
     } else {
       do_404(&request);
     }
