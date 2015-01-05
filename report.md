@@ -15,6 +15,7 @@ yandex-tank ammo.txt
 test results are saved to:
 
 ./node/2015-01-05_00-42-59.HzJt70/ - html report
+
 https://loadosophia.org/gui/201348/#tab=tabTimelines - loadosophia url
 
 from test results we notice that the average load node.js could hold is ~1000rps.
@@ -29,7 +30,7 @@ so, test setup is the same as for node.js
 
 starting fastcgi (cwd = ./c, note that redis auth is hardcoded into the code, for simplicity):
 
-make; nginx -s reload;
+make; sudo nginx -s reload;
 
 starting test in the same tab (cwd = ./c, the same tab is reused cause nginx is a daemon):
 
