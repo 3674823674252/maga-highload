@@ -17,7 +17,7 @@
 #define NUM_THREADS 4
 #define BUF_CAP 1024
 
-const char* sockpath = "/tmp/fcgicpp.sock";
+const char* sockpath = "127.0.0.1:9000";
 
 void do_404(FCGX_Request* request) {
   FCGX_PutS("Status: 404\r\n", request->out);
