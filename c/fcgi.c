@@ -14,19 +14,21 @@
 
 #define ERR_NO_SOCKET 85
 
-#define NUM_THREADS 4
+#define NUM_THREADS 100
 #define BUF_CAP 1024
 
 const char* sockpath = "127.0.0.1:9000";
 
 void do_404(FCGX_Request* request) {
-  FCGX_PutS("Status: 404\r\n", request->out);
+
+  FCGX_PutS("Content-type: application/json\r\n", request->out); 
   FCGX_PutS("\r\n", request->out);
   FCGX_PutS("{ \"status\": \"some 404 error happened\" }", request->out);
   FCGX_Finish_r(request); 
 }
 
 void do_500(FCGX_Request* request) {
+  FCGX_PutS("Content-type: application/json\r\n", request->out);
   FCGX_PutS("Status: 500\r\n", request->out);
   FCGX_PutS("\r\n", request->out);
   FCGX_PutS("{ \"status\": \"some error happened\" }", request->out);
@@ -34,7 +36,7 @@ void do_500(FCGX_Request* request) {
 }
 
 void do_200(FCGX_Request* request) {
-  FCGX_PutS("Status: 200\r\n", request->out);
+  FCGX_PutS("Content-type: application/json\r\n", request->out);
   FCGX_PutS("\r\n", request->out);
   FCGX_PutS("{ \"status\": 200 }", request->out);
   FCGX_Finish_r(request); 
@@ -43,11 +45,6 @@ void do_200(FCGX_Request* request) {
 void do_put(char* user, char* lat, char* lon, FCGX_Request* request, REDIS* redis) {
   char buf[BUF_CAP];
 
-  if (!redis) {
-    do_500(request);
-    return;
-  }
-
   sprintf(buf, "{ \"lat\": \"%s\", \"lon\": \"%s\" }", lat, lon);
 
   credis_set(*redis, user, buf);
@@ -55,22 +52,12 @@ void do_put(char* user, char* lat, char* lon, FCGX_Request* request, REDIS* redi
 }
 
 void do_del(char* user, FCGX_Request* request, REDIS* redis) {
-  if (!redis) {
-    do_500(request);
-    return;
-  }
-
   credis_del(*redis, user);
   do_200(request);
 }
 
 void do_get(char* user, FCGX_Request* request, REDIS* redis) {
   char* coords;
-
-  if (!redis) {
-    do_500(request);
-    return;
-  }
 
   credis_get(*redis, user, &coords);
 
@@ -79,7 +66,7 @@ void do_get(char* user, FCGX_Request* request, REDIS* redis) {
     return;
   }
 
-  FCGX_PutS("Status: 200\r\n", request->out);
+  FCGX_PutS("Content-type: application/json\r\n", request->out);
   FCGX_PutS("\r\n", request->out);
   FCGX_PutS(coords, request->out);
   FCGX_Finish_r(request); 
@@ -261,8 +248,8 @@ int main(void) {
   struct thread_info* info;
 
   FCGX_Init();
-  chmod(sockpath, 0777);
-  socket_fd = FCGX_OpenSocket(sockpath, 128);
+  // chmod(sockpath, 0777);
+  socket_fd = FCGX_OpenSocket(sockpath, 20);
 
   if (socket_fd < 0) {
     exit(ERR_NO_SOCKET);

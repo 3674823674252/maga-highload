@@ -1,0 +1,104 @@
+51 324 2003272 2000563 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:06:55 GMT
+Connection: close
+
+<html>
+<head>
+<title>FastCGI Hello! (multi-threaded C, fcgiapp library)</title>
+</head>
+<body>
+<h1>FastCGI Hello! (multi-threaded C, fcgiapp library)</h1>
+<p>Request accepted from host <i>localhost</i></p>
+</body>
+</html>
+
+112 324 2005678 2004677 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:06:56 GMT
+Connection: close
+
+<html>
+<head>
+<title>FastCGI Hello! (multi-threaded C, fcgiapp library)</title>
+</head>
+<body>
+<h1>FastCGI Hello! (multi-threaded C, fcgiapp library)</h1>
+<p>Request accepted from host <i>localhost</i></p>
+</body>
+</html>
+
+51 324 2001821 2001297 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:06:57 GMT
+Connection: close
+
+<html>
+<head>
+<title>FastCGI Hello! (multi-threaded C, fcgiapp library)</title>
+</head>
+<body>
+<h1>FastCGI Hello! (multi-threaded C, fcgiapp library)</h1>
+<p>Request accepted from host <i>localhost</i></p>
+</body>
+</html>
+
+112 324 2001864 2001064 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:06:58 GMT
+Connection: close
+
+<html>
+<head>
+<title>FastCGI Hello! (multi-threaded C, fcgiapp library)</title>
+</head>
+<body>
+<h1>FastCGI Hello! (multi-threaded C, fcgiapp library)</h1>
+<p>Request accepted from host <i>localhost</i></p>
+</body>
+</html>
+
+51 324 2001666 2001156 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:06:59 GMT
+Connection: close
+
+<html>
+<head>
+<title>FastCGI Hello! (multi-threaded C, fcgiapp library)</title>
+</head>
+<body>
+<h1>FastCGI Hello! (multi-threaded C, fcgiapp library)</h1>
+<p>Request accepted from host <i>localhost</i></p>
+</body>
+</html>
+

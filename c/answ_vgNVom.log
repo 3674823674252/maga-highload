@@ -1,0 +1,83 @@
+51 132 4551 175 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 404
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:01:59 GMT
+Connection: close
+
+{ "status": "some 404 error happened" }
+112 132 3597 2207 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 404
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:02:00 GMT
+Connection: close
+
+{ "status": "some 404 error happened" }
+51 132 2803 1633 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 404
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:02:01 GMT
+Connection: close
+
+{ "status": "some 404 error happened" }
+112 132 1749 718 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 404
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:02:02 GMT
+Connection: close
+
+{ "status": "some 404 error happened" }
+51 132 6662 1364 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 404
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:02:03 GMT
+Connection: close
+
+{ "status": "some 404 error happened" }
+112 132 1559 1034 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 404
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:02:04 GMT
+Connection: close
+
+{ "status": "some 404 error happened" }
+51 132 1406 970 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 404
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 03:02:05 GMT
+Connection: close
+
+{ "status": "some 404 error happened" }

@@ -1,0 +1,20 @@
+2015-01-05 03:06:09.937 +0000 [info] [] Start
+2015-01-05 03:06:09.949 +0000 [error] [benchmark_io 060] format error
+2015-01-05 03:06:11.944 +0000 [error] [benchmark_io 000] 400 Not a HTTP reply (#3)
+2015-01-05 03:06:11.944 +0000 [error] [benchmark_io 000] Not a HTTP reply (#3)
+2015-01-05 03:06:12.941 +0000 [error] [benchmark_io 001] 400 Not a HTTP reply (#3)
+2015-01-05 03:06:12.941 +0000 [error] [benchmark_io 001] Not a HTTP reply (#3)
+2015-01-05 03:06:13.941 +0000 [error] [benchmark_io 002] 400 Not a HTTP reply (#3)
+2015-01-05 03:06:13.941 +0000 [error] [benchmark_io 002] Not a HTTP reply (#3)
+2015-01-05 03:06:14.941 +0000 [error] [benchmark_io 003] 400 Not a HTTP reply (#3)
+2015-01-05 03:06:14.941 +0000 [error] [benchmark_io 003] Not a HTTP reply (#3)
+2015-01-05 03:06:15.940 +0000 [error] [benchmark_io 005] 400 Not a HTTP reply (#3)
+2015-01-05 03:06:15.940 +0000 [error] [benchmark_io 005] Not a HTTP reply (#3)
+2015-01-05 03:06:16.383 +0000 [error] [phantom_logger] bq_sleep: Operation canceled
+2015-01-05 03:06:16.383 +0000 [error] [monitor_io] bq_sleep: Operation canceled
+2015-01-05 03:06:16.383 +0000 [error] [benchmark_io stream_method brief_logger] bq_sleep: Operation canceled
+2015-01-05 03:06:16.383 +0000 [error] [benchmark_io 004] poll: Operation canceled
+2015-01-05 03:06:16.385 +0000 [error] [benchmark_io stream_method benchmark_logger] bq_sleep: Operation canceled
+2015-01-05 03:06:16.385 +0000 [error] [monitor_io] bq_sleep: Operation canceled
+2015-01-05 03:06:16.386 +0000 [error] [benchmark_io 007] poll: Operation canceled
+2015-01-05 03:06:16.388 +0000 [info] [] Exit

@@ -1,0 +1,720 @@
+51 110 91884 91328 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:02 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 3145 2247 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:03 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 3714 2977 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:04 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1676 1101 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:05 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1723 1097 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:06 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1589 1071 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:07 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1846 1283 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:08 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1636 1099 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:09 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1719 981 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:10 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1522 985 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:11 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1774 1295 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:12 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1940 1360 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:13 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1852 1143 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:14 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1600 1087 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:15 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1661 1058 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:16 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 2144 1636 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:17 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1494 778 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:18 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1866 1236 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:19 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1853 984 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:20 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 2099 1462 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:21 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1658 1204 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:22 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1761 1224 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:23 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1639 1187 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:24 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1563 1088 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:25 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1684 1197 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:26 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 2209 1406 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:27 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1529 1060 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:28 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1772 1262 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:29 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1626 1169 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:30 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1356 911 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:31 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1463 935 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:32 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1623 1173 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:33 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1550 1078 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:34 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1856 1030 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:35 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1652 1196 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:36 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 2542 1769 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:37 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1607 1169 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:38 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1651 1164 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:39 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1622 1100 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:40 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1682 1114 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:41 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1982 1371 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:42 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 2432 1542 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:43 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1961 1272 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:44 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1608 1144 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:45 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1816 1260 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:46 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 3036 1744 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:47 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 2413 1531 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:48 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1928 1388 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:49 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 2005 1442 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:50 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1639 1167 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:51 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1626 1016 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:52 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1582 1053 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:53 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1413 972 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:54 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1427 972 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:55 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1510 1054 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:56 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1435 954 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:57 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1581 1121 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:58 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1635 1120 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:52:59 GMT
+Connection: close
+
+{ "status": 200 }
+51 110 1394 967 71
+GET /loc/get/user1 HTTP/1.0
+Host: localhost:80
+
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:53:00 GMT
+Connection: close
+
+{"lat":1,"lon":1}
+112 110 1934 1274 71
+POST /loc/put HTTP/1.0
+Host: localhost:80
+Content-Length: 43
+
+{ "user": "test-user", "lat": 1, "lon": 2 }
+
+HTTP/1.1 200
+Server: nginx/1.4.1
+Date: Mon, 05 Jan 2015 02:53:01 GMT
+Connection: close
+
+{ "status": 200 }
