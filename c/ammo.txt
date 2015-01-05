@@ -1,9 +1,9 @@
 51 get
-GET /loc/get/user1 HTTP/1.1
+GET /loc/get/user1 HTTP/1.0
 Host: localhost:80
 
 112 put
-POST /loc/put HTTP/1.1
+POST /loc/put HTTP/1.0
 Host: localhost:80
 Content-Length: 43
 
