@@ -14,7 +14,7 @@
 
 #define ERR_NO_SOCKET 85
 
-#define NUM_THREADS 100
+#define NUM_THREADS 1000
 #define BUF_CAP 1024
 
 const char* sockpath = "127.0.0.1:9000";
