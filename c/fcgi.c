@@ -43,7 +43,7 @@ void do_200(FCGX_Request* request) {
 void do_put(char* user, char* lat, char* lon, FCGX_Request* request, REDIS* redis) {
   char buf[BUF_CAP];
 
-  if (!*redis) {
+  if (!redis) {
     do_500(request);
     return;
   }
@@ -55,6 +55,11 @@ void do_put(char* user, char* lat, char* lon, FCGX_Request* request, REDIS* redi
 }
 
 void do_del(char* user, FCGX_Request* request, REDIS* redis) {
+  if (!redis) {
+    do_500(request);
+    return;
+  }
+
   credis_del(*redis, user);
   do_200(request);
 }
@@ -62,7 +67,17 @@ void do_del(char* user, FCGX_Request* request, REDIS* redis) {
 void do_get(char* user, FCGX_Request* request, REDIS* redis) {
   char* coords;
 
+  if (!redis) {
+    do_500(request);
+    return;
+  }
+
   credis_get(*redis, user, &coords);
+
+  if (!coords) {
+    do_404(request);
+    return;
+  }
 
   FCGX_PutS("Status: 200\r\n", request->out);
   FCGX_PutS("\r\n", request->out);
