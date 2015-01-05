@@ -221,7 +221,7 @@ void* start_thread(void *arg) {
 
     if (is_get(method, uri)) {
       user_get = extract_user_from_uri(uri);
-      do_get(user, &request, &redis);
+      do_get(user_get, &request, &redis);
     } else if (is_put(method, uri)) {
       body = extract_body(request.in);
 
